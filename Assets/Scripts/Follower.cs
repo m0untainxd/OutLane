@@ -11,12 +11,12 @@ public class Follower : MonoBehaviour
     float speed;
     float distTravelled;
     int lane = 1;
-    public PathCreator pathCreator;
+    private PathCreator pathCreator;
 
     private void Start()
     {
         Lane();
-        speed = 5;
+        speed = 15;
     }
 
     private void Awake()
@@ -72,6 +72,5 @@ public class Follower : MonoBehaviour
     public void increaseSpeed()
     {
         speed += 5;
-        Debug.Log("Speed increased by 5");
     }
 }

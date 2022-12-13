@@ -30,8 +30,6 @@ public class GameState : MonoBehaviour
     {
         coinsCollected++;
         score = score + 100;
-        Debug.Log("Coins collected: " + coinsCollected);
-        Debug.Log("Score: " + score);
     }
 
     public void lap()

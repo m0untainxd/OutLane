@@ -6,10 +6,16 @@ public class coinCollection : MonoBehaviour
 {
     public static coinCollection instance = null;
     private AudioSource audioSource;
+    public float turnSpeed;
 
     private void Start()
     {
         audioSource = GetComponent<AudioSource>();
+    }
+
+    private void Update()
+    {
+        transform.Rotate(Vector3.up * Time.deltaTime * turnSpeed);
     }
 
     private void OnTriggerEnter(Collider other)
